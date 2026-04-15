@@ -1,0 +1,390 @@
+/* =========================
+   🌌 BASE
+========================= */
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: #05070d;
+    color: white;
+  }
+  
+  .home {
+    width: 100%;
+  }
+  
+  /* =========================
+     🔝 NAVBAR
+  ========================= */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: rgba(0,0,0,0.7);
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: 700;
+    background: linear-gradient(90deg, #f5c518, #ff2e63);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .nav-links span {
+    margin: 0 15px;
+    cursor: pointer;
+    opacity: 0.8;
+  }
+  
+  .nav-links span:hover {
+    opacity: 1;
+  }
+  
+  .search {
+    padding: 6px 10px;
+    border-radius: 20px;
+    border: none;
+  }
+  
+  /* =========================
+     🎬 HERO
+  ========================= */
+  .hero {
+    position: relative;
+    height: 90vh;
+    overflow: hidden;
+  }
+  
+  .hero img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to right,
+      rgba(5, 7, 13, 0.95),
+      rgba(5, 7, 13, 0.6),
+      rgba(5, 7, 13, 0.2)
+    );
+  }
+  
+  .hero-content {
+    position: absolute;
+    top: 50%;
+    left: 60px;
+    transform: translateY(-50%);
+    max-width: 700px;
+    padding-left: 10px;
+  }
+  
+  /* =========================
+     🔍 SEARCH (FIXED CLEAN)
+  ========================= */
+  .search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  
+  .hero-search {
+    width: 550px;
+    max-width: 90%;
+    padding: 15px 25px;
+  
+    border-radius: 40px;
+    border: none;
+    outline: none;
+  
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  
+    color: white;
+    font-size: 17px;
+  
+    box-shadow: 0 0 25px rgba(255, 200, 0, 0.15);
+    transition: 0.3s ease;
+  }
+  
+  .hero-search::placeholder {
+    color: rgba(255,255,255,0.6);
+  }
+  
+  .hero-search:hover {
+    transform: scale(1.05);
+  }
+  
+  .hero-search:focus {
+    box-shadow: 0 0 30px rgba(255, 200, 0, 0.7);
+  }
+  
+  /* =========================
+     🎬 TITLE
+  ========================= */
+  .hero-content {
+    position: absolute;
+    top: 5%;                /* 🔥 pushes everything slightly down */
+    left: 46%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 100%;
+  }
+
+  .hero-content h1 {
+    font-size: 72px;
+    font-weight: 700;
+  
+    margin-top: 30px;       /* 🔥 space from search */
+    margin-bottom: 25px;    /* 🔥 space before badges */
+  
+    line-height: 1.2;       /* 🔥 prevents cutting */
+    overflow: visible;      /* 🔥 IMPORTANT FIX */
+  
+    background: linear-gradient(90deg, #00ff9f, #f5c518);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  
+    text-shadow: 0 0 20px rgba(0, 255, 159, 0.4);
+  }
+  
+  /* =========================
+     🎮 BUTTONS
+  ========================= */
+  .play {
+    background: linear-gradient(135deg, #ff4d6d, #f5c518);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 30px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .play:hover {
+    transform: scale(1.1);
+  }
+  
+  .info {
+    background: transparent;
+    border: 1px solid white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+  
+  .info:hover {
+    background: rgba(255,255,255,0.1);
+  }
+  
+  /* =========================
+     🏷 BADGES
+  ========================= */
+  .badges {
+    margin-top: 15px;
+  }
+  
+  .badges span {
+    margin-right: 10px;
+    padding: 5px 12px;
+    border-radius: 12px;
+    background: #222;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  .badges span:hover {
+    background: #444;
+  }
+  
+  /* =========================
+     🎞 MOVIE ROW
+  ========================= */
+  .section {
+    padding: 30px 40px;
+  }
+  
+  .row {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+  }
+  
+  .card img {
+    width: 160px;
+    border-radius: 10px;
+    transition: 0.3s;
+  }
+  
+  .card img:hover {
+    transform: scale(1.1);
+  }
+  
+  /* =========================
+     🎛 FILTERS
+  ========================= */
+  .filters {
+    display: flex;
+    gap: 12px;
+    padding: 20px 40px;
+    margin-top: 10px;
+  }
+  
+  .filters select {
+    padding: 10px 14px;
+    background: rgba(255,255,255,0.08);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 8px;
+    cursor: pointer;
+    outline: none;
+    font-size: 14px;
+  }
+  
+  .filters select option {
+    background: #111;
+    color: white;
+  }
+
+  /* =========================
+   🎬 MOVIE SECTION GLOW BG
+========================= */
+
+
+.movie-section {
+    position: relative;
+    padding: 50px 40px;
+  
+    background:
+      /* 🌿 GREEN LIGHT GLOW (tree vibe) */
+      radial-gradient(circle at 20% 30%, rgba(0, 255, 140, 0.25), transparent 40%),
+  
+      /* ✨ GOLD LIGHT GLOW */
+      radial-gradient(circle at 80% 20%, rgba(255, 200, 0, 0.25), transparent 40%),
+  
+      /* 🌄 LIGHT RAYS EFFECT */
+      linear-gradient(120deg, rgba(0,255,140,0.08) 10%, transparent 30%),
+      linear-gradient(300deg, rgba(255,200,0,0.08) 10%, transparent 30%),
+  
+      /* 🌌 BASE DARK */
+      linear-gradient(to bottom, #02050a, #081a14, #1a1205);
+  }
+
+  .movie-section::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+  
+    background: radial-gradient(
+      circle at center,
+      transparent 40%,
+      rgba(0, 0, 0, 0.6)
+    );
+  
+    pointer-events: none;
+  }
+  
+  /* ✨ TOP FADE BLEND (smooth transition from hero) */
+  .movie-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+  
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      rgba(255, 200, 0, 0.08)
+    );
+  
+    pointer-events: none;
+  }
+  
+  /* =========================
+     🎞 GRID IMPROVEMENT
+  ========================= */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+  }
+  
+  /* =========================
+     🎥 CARD STYLE UPGRADE
+  ========================= */
+  .grid img {
+    width: 100%;
+    border-radius: 14px;
+  
+    transition: 0.4s ease;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+  }
+  
+  /* 🔥 HOVER EFFECT */
+  .grid img:hover {
+    transform: scale(1.08);
+  
+    box-shadow:
+      0 0 25px rgba(0, 255, 140, 0.6),
+      0 0 40px rgba(255, 200, 0, 0.6);
+  
+    filter: brightness(1.1) saturate(1.2);
+  }
+
+  /* =========================
+   🔢 PAGINATION
+========================= */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 40px 0;
+}
+
+.pagination button {
+  padding: 10px 18px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.pagination button:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+/* PAGE NUMBERS */
+.pagination span {
+  padding: 10px 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+/* ACTIVE PAGE (🔥 GREEN + GOLD GLOW) */
+.pagination .active {
+  background: linear-gradient(135deg, #00ff9f, #f5c518);
+  color: black;
+  font-weight: bold;
+
+  box-shadow:
+    0 0 20px rgba(0,255,150,0.6),
+    0 0 30px rgba(245,197,24,0.6);
+}
+
+/* DOTS */
+.pagination .dots {
+  border: none;
+  cursor: default;
+}
